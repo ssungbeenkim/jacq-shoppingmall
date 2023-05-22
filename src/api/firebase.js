@@ -22,7 +22,6 @@ const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
 
 export function login() {
-  console.log('login');
   signInWithPopup(auth, provider).catch(console.error);
 }
 export function logout() {
@@ -50,7 +49,7 @@ async function adminUser(user) {
 
 export async function addNewProduct(product, image) {
   const id = uuid();
-  set(ref(database, `products/${id}`), {
+  return set(ref(database, `products/${id}`), {
     ...product,
     id,
     price: parseInt(product.price),
