@@ -19,7 +19,7 @@ export default function MyCart() {
   const totalPrice =
     hasProducts &&
     products.reduce(
-      (prev, curr) => prev + parseInt(curr.price) * curr.quentity,
+      (prev, curr) => prev + parseInt(curr.price) * curr.quantity,
       0
     );
   return (
@@ -37,7 +37,7 @@ export default function MyCart() {
               ))}
           </ul>
           <div className='flex justify-between items-center mb-4 p-2 md:px-8 lg:px-16'>
-            <PriceCard text='상품 총액' prict={totalPrice} />
+            <PriceCard text='상품 총액' price={totalPrice} />
             <BsFillPlusCircleFill className='shrink-0' />
             <PriceCard text='배송비' price={SHIPPING} />
             <FaEquals className='shrink-0' />

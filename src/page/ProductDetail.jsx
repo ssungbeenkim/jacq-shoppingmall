@@ -31,9 +31,9 @@ export default function ProductDetail() {
           </p>
           <p className='py-4 text-lg'>{description}</p>
           <div className='flex items-center'>
-            <lable className='text-brand font-bold' htmlFor='select'>
+            <label className='text-brand font-bold' htmlFor='select'>
               옵션:
-            </lable>
+            </label>
             <select
               className=' p-2 m-4 flex-1 border-2 border-dashed border-brand outline-none'
               onChange={handleSelect}
