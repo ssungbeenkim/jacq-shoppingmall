@@ -7,7 +7,7 @@ import { FaEquals } from 'react-icons/fa';
 import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
 
-const SHIPPING = 3000;
+const SHIPPING = 30;
 export default function MyCart() {
   const { uid } = useAuthContext();
   const {
